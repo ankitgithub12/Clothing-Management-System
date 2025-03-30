@@ -1,0 +1,91 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-300 flex items-center justify-center h-screen">
+    <div class="max-w-[900px] bg-gradient-to-r from-gray-400 to-gray-200 grid gap-2 grid-cols-2 items-center p-5 rounded-3xl shadow-2xl">
+        <div class="">
+            <img src="Screenshot 2025-02-12 191047.png" alt="img" class="rounded-3xl shadow-lg">
+        </div>
+        <div class="px-8 max-2-[80] grid gap-5">
+            <h1 class="text-5xl font-bold text-white">Login</h1>
+            <p class="">Become the member of our e-store</p>
+            <form action="" class="space-y-2">
+                <div>
+
+                    <p class="font-bold">Email</p>
+                    <input type="email" placeholder="Enter email" name="email" class="rounded-md w-64 p-1 focus:outline-none focus:drop-shadow-lg focus:p-1.5">
+                </div>
+                <div>
+
+                    <p class="font-bold">Password</p>
+                    <input type="password" placeholder="Enter password" name="password" class="rounded-md w-64 p-1 focus:outline-none focus:drop-shadow-lg focus:p-1.5">
+                </div>
+                <div class="">
+                    <button class="ring-1 ring-black  bg-gradient-to-r from-gray-400 to-gray-100 rounded-md px-3  hover:drop-shadow-lg  ">Sign in</button>
+                </div>
+            </form>
+            <div class="border-t border-black pt-4 space-y-2">
+                <p>Don't have any Account. <a href="" class="font-semibold cursor-pointer mx-1">Sign up</a></p>
+                <p>Forgot password?<a href="" class="font-semibold cursor-pointer mx-1">Reset password</a></p>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-300 flex items-center justify-center h-screen">
+    <div class="max-w-[900px] bg-gradient-to-r from-gray-400 to-gray-200 grid gap-2 grid-cols-2 items-center p-5 rounded-3xl shadow-2xl">
+        <div>
+            <img src="Screenshot 2025-02-12 191047.png" alt="img" class="rounded-3xl shadow-lg">
+        </div>
+        <div class="px-8 max-w-[80] grid gap-5">
+            <h1 class="text-5xl font-bold text-white">Login</h1>
+            <p>Become a member of our e-store</p>
+            <form id="loginForm" class="space-y-2">
+                <div>
+                    <p class="font-bold">Email</p>
+                    <input type="email" id="email" placeholder="Enter email" name="email" class="rounded-md w-64 p-1 focus:outline-none focus:drop-shadow-lg focus:p-1.5">
+                </div>
+                <div>
+                    <p class="font-bold">Password</p>
+                    <input type="password" id="password" placeholder="Enter password" name="password" class="rounded-md w-64 p-1 focus:outline-none focus:drop-shadow-lg focus:p-1.5">
+                </div>
+                <div>
+                    <button type="submit" class="ring-1 ring-black bg-gradient-to-r from-gray-400 to-gray-100 rounded-md px-3 hover:drop-shadow-lg">Sign in</button>
+                </div>
+            </form>
+            <div class="border-t border-black pt-4 space-y-2">
+                <p>Don't have an account? <a href="#" class="font-semibold cursor-pointer mx-1">Sign up</a></p>
+                <p>Forgot password? <a href="#" class="font-semibold cursor-pointer mx-1">Reset password</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            
+            if (email === "user@gmail.com" || password === "user123") {
+                alert("Please fill out all fields.");
+            } else {
+                alert("Login successful!");
+            }
+        });
+    </script>
+</body>
+</html>
