@@ -1,5 +1,6 @@
 <?php
-include("database.php");
+session_start();
+include("config/database.php");
 $msg = '';
 
 if (isset($_POST['submit'])) {
@@ -42,13 +43,29 @@ if (isset($_POST['submit'])) {
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#8b5e3c",
+                        secondary: "#6d4c35",
+                        accent: "#a07856",
+                        dark: "#2d2d2d",
+                        light: "#f8f5f2"
+                    },
+                },
+            },
+        };
+    </script>
 </head>
 <body class="flex flex-col h-screen justify-center items-center bg-gradient-to-br from-gray-100 to-gray-300">
     <div class="relative w-full max-w-4xl mx-4">
         <div class="absolute inset-0 w-full h-full bg-cover bg-center opacity-20 rounded-3xl" style="background-image: url('https://source.unsplash.com/1600x900/?fashion,runway');"></div>
         
         <div class="relative bg-white/90 backdrop-blur-sm shadow-2xl rounded-3xl overflow-hidden md:flex">
-            <div class="hidden md:flex md:flex-col md:justify-center md:w-1/2 p-8 bg-gradient-to-br from-indigo-500 to-purple-600">
+            <div class="hidden md:flex md:flex-col md:justify-center md:w-1/2 p-8 bg-gradient-to-br from-primary to-secondary">
                 <div class="text-white text-center space-y-6">
                     <h2 class="text-4xl font-bold animate__animated animate__fadeIn">Welcome to Fashion Frontier</h2>
                     <p class="text-lg">Join our community of fashion enthusiasts and get access to exclusive deals and trends.</p>
@@ -69,7 +86,7 @@ if (isset($_POST['submit'])) {
             <div class="md:w-1/2 w-full p-8 md:p-10">
                 <div class="flex justify-between items-center mb-6">
                     <h1 class="text-3xl font-bold text-gray-800">Create Account</h1>
-                    <a href="login.php" class="text-sm text-blue-600 hover:underline">Already a member?</a>
+                    <a href="login.php" class="text-sm text-primary hover:underline">Already a member?</a>
                 </div>
                 
                 <?php if ($msg): ?>
@@ -84,7 +101,7 @@ if (isset($_POST['submit'])) {
                         <div class="relative">
                             <i class="fas fa-user absolute left-3 top-3 text-gray-400"></i>
                             <input type="text" id="name" name="Name" placeholder="Enter your name" 
-                                   class="w-full pl-10 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition">
+                                   class="w-full pl-10 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition">
                         </div>
                     </div>
                     
@@ -93,7 +110,7 @@ if (isset($_POST['submit'])) {
                         <div class="relative">
                             <i class="fas fa-envelope absolute left-3 top-3 text-gray-400"></i>
                             <input type="email" id="email" name="email" placeholder="Enter your email" 
-                                   class="w-full pl-10 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition">
+                                   class="w-full pl-10 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition">
                         </div>
                     </div>
                     
@@ -102,7 +119,7 @@ if (isset($_POST['submit'])) {
                         <div class="relative">
                             <i class="fas fa-lock absolute left-3 top-3 text-gray-400"></i>
                             <input type="password" id="password" name="CreatePassword" placeholder="Enter password" 
-                                   class="w-full pl-10 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition">
+                                   class="w-full pl-10 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition">
                             <i class="fas fa-eye-slash absolute right-3 top-3 text-gray-400 cursor-pointer" id="togglePassword"></i>
                         </div>
                         <div class="text-xs text-gray-500 mt-1" id="password-strength"></div>
@@ -113,17 +130,17 @@ if (isset($_POST['submit'])) {
                         <div class="relative">
                             <i class="fas fa-lock absolute left-3 top-3 text-gray-400"></i>
                             <input type="password" id="confirmPassword" name="ConfirmPassword" placeholder="Confirm password" 
-                                   class="w-full pl-10 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition">
+                                   class="w-full pl-10 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition">
                             <i class="fas fa-eye-slash absolute right-3 top-3 text-gray-400 cursor-pointer" id="toggleConfirmPassword"></i>
                         </div>
                     </div>
 
                     <div class="flex items-start space-x-2 pt-3">
-                        <input type="checkbox" id="terms" name="terms" class="mt-1 w-4 h-4 accent-purple-600">
-                        <label for="terms" class="text-sm text-gray-600">I agree to the <a href="#" class="text-purple-600 hover:underline">terms and conditions</a> and <a href="#" class="text-purple-600 hover:underline">privacy policy</a></label>
+                        <input type="checkbox" id="terms" name="terms" class="mt-1 w-4 h-4 accent-primary">
+                        <label for="terms" class="text-sm text-gray-600">I agree to the <a href="#" class="text-primary hover:underline">terms and conditions</a> and <a href="#" class="text-primary hover:underline">privacy policy</a></label>
                     </div>
 
-                    <button class="w-full py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition duration-300 shadow-md hover:shadow-lg flex items-center justify-center" name="submit">
+                    <button class="w-full py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-lg font-semibold hover:from-secondary hover:to-primary transition duration-300 shadow-md hover:shadow-lg flex items-center justify-center" name="submit">
                         <i class="fas fa-user-plus mr-2"></i> Sign Up
                     </button>
                     

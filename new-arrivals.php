@@ -1,67 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Arrivals - Clothing Management Store</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#3B82F6',
-                        secondary: '#1E40AF',
-                        accent: '#10B981',
-                    }
-                }
-            }
-        }
-    </script>
-</head>
-<body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <div class="flex-shrink-0 flex items-center">
-                        <i class="fas fa-tshirt text-primary text-2xl mr-2"></i>
-                        <span class="text-xl font-bold text-gray-900">Clothing Management Store</span>
-                    </div>
-                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-                        <a href="#" class="border-primary text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
-                        <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Shop</a>
-                        <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">New Arrivals</a>
-                        <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Collections</a>
-                        <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Contact</a>
-                    </div>
-                </div>
-                <div class="hidden sm:ml-6 sm:flex sm:items-center">
-                    <button type="button" class="bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
-                        <span class="sr-only">Search</span>
-                        <i class="fas fa-search h-6 w-6"></i>
-                    </button>
-                    <button type="button" class="ml-4 bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
-                        <span class="sr-only">Account</span>
-                        <i class="fas fa-user h-6 w-6"></i>
-                    </button>
-                    <a href="cart.html" class="ml-4 bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
-                        <span class="sr-only">Cart</span>
-                        <i class="fas fa-shopping-cart h-6 w-6"></i>
-                        <span class="ml-1 text-sm font-medium text-primary cart-count">0</span>
-                    </a>
-                </div>
-                <div class="-mr-2 flex items-center sm:hidden">
-                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary">
-                        <span class="sr-only">Open main menu</span>
-                        <i class="fas fa-bars h-6 w-6"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
+<?php
+$pageTitle = "New Arrivals - Fashion World";
+include('includes/header.php');
+?>
+
+
+
+
 
     <!-- Hero Section -->
     <div class="bg-gradient-to-r from-primary to-secondary">
@@ -115,7 +59,7 @@
             <!-- Product 1 -->
             <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 product" data-id="na1">
                 <div class="relative">
-                    <img src="Men Clothes/denim1.jpeg" alt="Denim Jacket" class="w-full h-64 object-cover">
+                    <img src="assets/images/men/denim1.jpeg" alt="Denim Jacket" class="w-full h-64 object-cover">
                     <div class="absolute top-2 right-2 bg-primary text-white text-xs font-bold px-2 py-1 rounded-full">
                         NEW
                     </div>
@@ -155,7 +99,7 @@
             <!-- Product 3 -->
             <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 product" data-id="na3">
                 <div class="relative">
-                    <img src="Men Clothes/snekars.webp" class="w-full h-64 object-cover">
+                    <img src="assets/images/men/snekars.webp" class="w-full h-64 object-cover">
                     <div class="absolute top-2 right-2 bg-accent text-white text-xs font-bold px-2 py-1 rounded-full">
                         SALE
                     </div>
@@ -178,7 +122,7 @@
             <!-- Product 4 -->
             <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 product" data-id="na4">
                 <div class="relative">
-                    <img src="Woman Clothes/generic.webp" class="w-full h-64 object-cover">
+                    <img src="assets/images/women/generic.webp" class="w-full h-64 object-cover">
                     <div class="absolute top-2 right-2 bg-primary text-white text-xs font-bold px-2 py-1 rounded-full">
                         NEW
                     </div>
@@ -198,7 +142,7 @@
             <!-- Product 5 -->
             <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 product" data-id="na5">
                 <div class="relative">
-                    <img src="Men Clothes/image15.webp" alt="Wool Beanie" class="w-full h-64 object-cover">
+                    <img src="assets/images/men/image15.webp" alt="Wool Beanie" class="w-full h-64 object-cover">
                     <div class="absolute top-2 right-2 bg-primary text-white text-xs font-bold px-2 py-1 rounded-full">
                         NEW
                     </div>
@@ -218,7 +162,7 @@
             <!-- Product 6 -->
             <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 product" data-id="na6">
                 <div class="relative">
-                    <img src="Men Clothes/shopping.webp" alt="Chino Pants" class="w-full h-64 object-cover">
+                    <img src="assets/images/men/shopping.webp" alt="Chino Pants" class="w-full h-64 object-cover">
                     <div class="absolute top-2 right-2 bg-accent text-white text-xs font-bold px-2 py-1 rounded-full">
                         SALE
                     </div>
@@ -331,196 +275,10 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white">
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Clothing Management Store</h3>
-                    <p class="text-gray-400 text-sm">
-                        Your one-stop shop for all the latest fashion trends and timeless classics.
-                    </p>
-                    <div class="mt-4 flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white">
-                            <i class="fab fa-pinterest"></i>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Shop</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Men's Clothing</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Women's Clothing</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Kids' Collection</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Accessories</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">New Arrivals</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Customer Service</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Contact Us</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">FAQs</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Shipping & Returns</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Size Guide</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Track Order</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">About Us</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Our Story</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Sustainability</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Careers</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Terms & Conditions</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="mt-12 pt-8 border-t border-gray-800">
-                <p class="text-gray-400 text-sm text-center">
-                    &copy; 2023 Clothing Management Store. All rights reserved.
-                </p>
-            </div>
-        </div>
-    </footer>
+    
 
-    <!-- Mobile menu (hidden by default) -->
-    <div class="hidden fixed inset-0 bg-white z-50" id="mobile-menu">
-        <div class="p-4">
-            <button type="button" class="absolute top-4 right-4 text-gray-500 hover:text-gray-600" onclick="document.getElementById('mobile-menu').classList.add('hidden')">
-                <i class="fas fa-times h-6 w-6"></i>
-            </button>
-            <div class="pt-8 space-y-6">
-                <a href="#" class="block text-lg font-medium text-gray-900 hover:text-primary">Home</a>
-                <a href="#" class="block text-lg font-medium text-gray-900 hover:text-primary">Shop</a>
-                <a href="#" class="block text-lg font-medium text-gray-900 hover:text-primary">New Arrivals</a>
-                <a href="#" class="block text-lg font-medium text-gray-900 hover:text-primary">Collections</a>
-                <a href="#" class="block text-lg font-medium text-gray-900 hover:text-primary">Contact</a>
-                <div class="pt-6 border-t border-gray-200">
-                    <div class="flex items-center space-x-4">
-                        <button type="button" class="text-gray-500 hover:text-gray-600">
-                            <i class="fas fa-search h-6 w-6"></i>
-                        </button>
-                        <button type="button" class="text-gray-500 hover:text-gray-600">
-                            <i class="fas fa-user h-6 w-6"></i>
-                        </button>
-                        <a href="cart.html" class="text-gray-500 hover:text-gray-600">
-                            <i class="fas fa-shopping-cart h-6 w-6"></i>
-                            <span class="ml-1 text-sm font-medium text-primary cart-count">0</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <script>
-        // Mobile menu toggle
-        document.querySelector('nav button').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
 
-        // Cart functionality
-        let cart = {
-            items: [],
-            totalItems: 0,
-            totalPrice: 0,
-
-            // Initialize cart from localStorage
-            init() {
-                const savedCart = localStorage.getItem('cart');
-                if (savedCart) {
-                    const parsedCart = JSON.parse(savedCart);
-                    this.items = parsedCart.items || [];
-                    this.totalItems = parsedCart.totalItems || 0;
-                    this.totalPrice = parsedCart.totalPrice || 0;
-                }
-                this.updateCartUI();
-            },
-
-            // Add item to cart
-            addItem(product) {
-                // Check if item already exists in cart
-                const existingItem = this.items.find(item => item.id === product.id);
-                
-                if (existingItem) {
-                    existingItem.quantity += 1;
-                } else {
-                    product.quantity = 1;
-                    this.items.push(product);
-                }
-                
-                this.totalItems += 1;
-                this.totalPrice += product.price;
-                
-                this.saveCart();
-                this.updateCartUI();
-            },
-
-            // Save cart to localStorage
-            saveCart() {
-                localStorage.setItem('cart', JSON.stringify({
-                    items: this.items,
-                    totalItems: this.totalItems,
-                    totalPrice: this.totalPrice
-                }));
-            },
-
-            // Update cart UI (cart icon count)
-            updateCartUI() {
-                const cartCountElements = document.querySelectorAll('.cart-count');
-                cartCountElements.forEach(element => {
-                    element.textContent = this.totalItems;
-                });
-            }
-        };
-
-        // Initialize cart when page loads
-        document.addEventListener('DOMContentLoaded', () => {
-            cart.init();
-            
-            // Set up event listeners for all "Add to Cart" buttons
-            document.querySelectorAll('.add-to-cart').forEach(button => {
-                button.addEventListener('click', (e) => {
-                    const productElement = e.target.closest('.product');
-                    if (productElement) {
-                        const priceText = productElement.querySelector('.product-price').textContent;
-                        const price = parseFloat(priceText.replace('₹', '').replace(',', ''));
-                        
-                        const product = {
-                            id: productElement.dataset.id,
-                            name: productElement.querySelector('h3').textContent,
-                            price: price,
-                            size: productElement.querySelector('.product-size').textContent,
-                            image: productElement.querySelector('img').src
-                        };
-                        cart.addItem(product);
-                        
-                        // Visual feedback
-                        const originalText = button.innerHTML;
-                        button.innerHTML = '<i class="fas fa-check mr-1"></i> Added';
-                        button.classList.remove('bg-primary', 'hover:bg-secondary');
-                        button.classList.add('bg-green-500', 'hover:bg-green-600');
-                        
-                        // Reset button after 1.5 seconds
-                        setTimeout(() => {
-                            button.innerHTML = originalText;
-                            button.classList.remove('bg-green-500', 'hover:bg-green-600');
-                            button.classList.add('bg-primary', 'hover:bg-secondary');
-                        }, 1500);
-                    }
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+<?php
+include('includes/footer.php');
+?>

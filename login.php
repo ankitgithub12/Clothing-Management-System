@@ -1,5 +1,5 @@
 <?php
-include("database.php");
+include("config/database.php");
 session_start();
 $msg = '';
 
@@ -22,6 +22,7 @@ if(isset($_POST['Login'])){
         if(password_verify($password, $row1['CreatePassword'])) {
             $_SESSION['user_id'] = $row1['id'];
             $_SESSION['user_name'] = $row1['Name'];
+            $_SESSION['user_email'] = $row1['Email'];
             
             // Set a cookie for "Remember me" functionality
             if (isset($_POST['remember'])) {
@@ -29,7 +30,7 @@ if(isset($_POST['Login'])){
                 setcookie('fashion_remember', '1', time() + (86400 * 30), "/");
             }
             
-            header("Location: main.php");
+            header("Location: index.php");
             exit();
         } else {
             $msg = "Invalid password!";
@@ -49,9 +50,25 @@ if(isset($_POST['Login'])){
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#8b5e3c",
+                        secondary: "#6d4c35",
+                        accent: "#a07856",
+                        dark: "#2d2d2d",
+                        light: "#f8f5f2"
+                    },
+                },
+            },
+        };
+    </script>
     <style>
         .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #8b5e3c 0%, #6d4c35 100%);
         }
         .card-shadow {
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
@@ -102,7 +119,7 @@ if(isset($_POST['Login'])){
 
             <div class="md:w-1/2 p-8 md:p-12">
                 <div class="text-center mb-2">
-                    <img src="Logo.jpeg" alt="Logo" class="h-12 mx-auto mb-4">
+                    <img src="assets/images/Logo.jpeg" alt="Logo" class="h-12 mx-auto mb-4">
                     <h1 class="text-3xl font-bold text-gray-800">Sign In</h1>
                     <p class="text-gray-600">Access your Fashion World account</p>
                 </div>
@@ -120,7 +137,7 @@ if(isset($_POST['Login'])){
                             <i class="fas fa-envelope absolute left-3 top-3 text-gray-400"></i>
                             <input type="email" id="email" name="email" placeholder="Enter your email" 
                                    value="<?php echo isset($_COOKIE['fashion_email']) ? htmlspecialchars($_COOKIE['fashion_email']) : ''; ?>"
-                                   class="w-full pl-10 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition">
+                                   class="w-full pl-10 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition">
                         </div>
                     </div>
                     
@@ -129,11 +146,11 @@ if(isset($_POST['Login'])){
                         <div class="relative">
                             <i class="fas fa-lock absolute left-3 top-3 text-gray-400"></i>
                             <input type="password" id="password" name="password" placeholder="Enter password" 
-                                   class="w-full pl-10 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition">
+                                   class="w-full pl-10 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition">
                             <i class="fas fa-eye-slash absolute right-3 top-3 text-gray-400 cursor-pointer" id="togglePassword"></i>
                         </div>
                         <div class="text-right mt-1">
-                            <a href="reset_password.php" class="text-sm text-purple-600 hover:underline">Forgot password?</a>
+                            <a href="reset_password.php" class="text-sm text-primary hover:underline">Forgot password?</a>
                         </div>
                     </div>
                     
@@ -141,7 +158,7 @@ if(isset($_POST['Login'])){
                         <div class="flex items-center">
                             <input type="checkbox" id="remember" name="remember" 
                                    <?php echo isset($_COOKIE['fashion_remember']) ? 'checked' : ''; ?>
-                                   class="w-4 h-4 accent-purple-600 rounded">
+                                   class="w-4 h-4 accent-primary rounded">
                             <label for="remember" class="ml-2 text-sm text-gray-600">Remember me</label>
                         </div>
                     </div>
@@ -165,7 +182,7 @@ if(isset($_POST['Login'])){
                     </div>
                     
                     <div class="text-center text-sm text-gray-600 pt-4">
-                        Don't have an account? <a href="createaccount.php" class="text-purple-600 font-semibold hover:underline">Sign up</a>
+                        Don't have an account? <a href="createaccount.php" class="text-primary font-semibold hover:underline">Sign up</a>
                     </div>
                 </form>
             </div>

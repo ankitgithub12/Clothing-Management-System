@@ -1,44 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Help Center | Frontier Phagwara</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#3b82f6',
-                        secondary: '#1e40af',
-                        accent: '#10b981',
-                    }
-                }
-            }
-        }
-    </script>
-</head>
-<body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="/" class="text-xl font-bold text-primary">Fashion World</a>
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-center space-x-4">
-                        <a href="main.php" class="px-3 py-2 text-sm font-medium hover:text-primary">Home</a>
-                        <a href="shop.html" class="px-3 py-2 text-sm font-medium hover:text-primary">Shop</a>
-                        <a href="help.html" class="px-3 py-2 text-sm font-medium text-primary border-b-2 border-primary">Help Center</a>
-                        <a href="/contact" class="px-3 py-2 text-sm font-medium hover:text-primary">Contact</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
+<?php
+$pageTitle = "Help & Support - Fashion World";
+include('includes/header.php');
+?>
+
+
+
+
 
     <!-- Hero Section -->
     <div class="bg-primary text-white py-16">
@@ -225,56 +192,9 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">YourStore</h3>
-                    <p class="text-gray-400">Quality products for everyone. Shop with confidence and convenience.</p>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Customer Service</h3>
-                    <ul class="space-y-2">
-                        <li><a href="help.html" class="text-gray-400 hover:text-white">Contact Us</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">FAQs</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Shipping Info</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Returns & Exchanges</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">About Us</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white">Our Story</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Connect With Us</h3>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-pinterest"></i></a>
-                    </div>
-                    <div class="mt-4">
-                        <p class="text-gray-400">Subscribe to our newsletter</p>
-                        <div class="flex mt-2">
-                            <input type="email" placeholder="Your email" class="px-3 py-2 rounded-l text-gray-800 w-full">
-                            <button class="bg-primary px-4 py-2 rounded-r hover:bg-blue-700">Join</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 Fashion World. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    
 
-    <!-- FAQ Toggle Script -->
-    <script>
+<script>
         document.querySelectorAll('.faq-toggle').forEach(button => {
             button.addEventListener('click', () => {
                 const content = button.nextElementSibling;
@@ -289,5 +209,7 @@
             });
         });
     </script>
-</body>
-</html>
+
+<?php
+include('includes/footer.php');
+?>
